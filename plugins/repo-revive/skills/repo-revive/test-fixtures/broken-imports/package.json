@@ -1,0 +1,1 @@
+{"name":"broken-imports","private":true,"type":"module","scripts":{"build":"node src/index.js"}}

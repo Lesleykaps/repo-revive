@@ -1,27 +1,23 @@
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
-const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 
-const cli = path.join(__dirname, '..', 'bin', 'repo-revive.js');
+const root = path.join(__dirname, '..');
+const cli = path.join(root, 'bin', 'repo-revive.js');
 
-test('dry run identifies the Codex destination without creating it', () => {
-  const home = fs.mkdtempSync(path.join(os.tmpdir(), 'repo-revive-'));
-  const output = execFileSync(process.execPath, [cli, 'codex', '--dry-run'], {
-    env: { ...process.env, CODEX_HOME: home }, encoding: 'utf8'
-  });
-  assert.match(output, /Would install Repo Revive/);
-  assert.equal(fs.existsSync(path.join(home, 'skills', 'repo-revive')), false);
-  fs.rmSync(home, { recursive: true, force: true });
+test('help documents the two supported hosts without making changes', () => {
+  const output = execFileSync(process.execPath, [cli, '--help'], { encoding: 'utf8' });
+  assert.match(output, /@ciphertechnologies\/repo-revive <codex\|claude>/);
+  assert.match(output, /does not inspect, change, or upload any repository/);
 });
 
-test('installer copies the skill entrypoint', () => {
-  const home = fs.mkdtempSync(path.join(os.tmpdir(), 'repo-revive-'));
-  execFileSync(process.execPath, [cli, 'codex'], { env: { ...process.env, CODEX_HOME: home } });
-  const skill = path.join(home, 'skills', 'repo-revive', 'SKILL.md');
-  assert.equal(fs.existsSync(skill), true);
-  assert.match(fs.readFileSync(skill, 'utf8'), /name: repo-revive/);
-  fs.rmSync(home, { recursive: true, force: true });
+test('marketplace and plugin manifests identify the same plugin', () => {
+  const marketplace = JSON.parse(fs.readFileSync(path.join(root, '.agents', 'plugins', 'marketplace.json')));
+  const manifest = JSON.parse(fs.readFileSync(path.join(root, 'plugins', 'repo-revive', '.codex-plugin', 'plugin.json')));
+  assert.equal(marketplace.name, 'cipher-technologies-repo-revive');
+  assert.equal(marketplace.plugins[0].name, manifest.name);
+  assert.equal(manifest.name, 'repo-revive');
+  assert.equal(fs.existsSync(path.join(root, 'plugins', 'repo-revive', 'skills', 'repo-revive', 'SKILL.md')), true);
 });

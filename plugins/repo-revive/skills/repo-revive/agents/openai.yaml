@@ -1,0 +1,6 @@
+interface:
+  display_name: "Repo Revive"
+  short_description: "Diagnose, plan, and safely rescue projects"
+  default_prompt: "Use $repo-revive to diagnose this repository and produce an evidence-backed rescue report."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cipher-technologies-repo-revive",
+  "description": "Evidence-backed repository recovery workflows from Cipher Technologies.",
+  "owner": {
+    "name": "Cipher Technologies",
+    "email": "info@ciphertechnologies.co.zw"
+  },
+  "plugins": [
+    {
+      "name": "repo-revive",
+      "description": "Evidence-backed repository diagnosis, recovery planning, and conservative repair.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Cipher Technologies",
+        "email": "info@ciphertechnologies.co.zw"
+      },
+      "source": "./plugins/repo-revive",
+      "category": "productivity",
+      "tags": ["repository", "diagnostics", "recovery", "repair"]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
-  "name": "repo-revive",
+  "name": "@ciphertechnologies/repo-revive",
   "version": "1.0.0",
-  "description": "Install the Repo Revive Codex skill from npm.",
+  "description": "Install the Repo Revive plugin from the Cipher Technologies GitHub marketplace.",
   "license": "MIT",
-  "author": "Lesley Kaps",
+  "author": "Cipher Technologies <info@ciphertechnologies.co.zw>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lesleykaps/repo-revive.git"
@@ -11,12 +11,12 @@
   "bugs": {
     "url": "https://github.com/Lesleykaps/repo-revive/issues"
   },
-  "homepage": "https://github.com/Lesleykaps/repo-revive#readme",
+  "homepage": "https://ciphertechnologies.co.zw/plugins/repo-revive",
   "keywords": ["codex", "skill", "repository", "diagnostics", "repair"],
   "bin": {
     "repo-revive": "bin/repo-revive.js"
   },
-  "files": ["bin", "skills", ".codex-plugin", ".claude-plugin", "README.md", "LICENSE", "PRIVACY.md", "TERMS.md"],
+  "files": ["bin", "README.md", "LICENSE"],
   "engines": {
     "node": ">=18"
   },

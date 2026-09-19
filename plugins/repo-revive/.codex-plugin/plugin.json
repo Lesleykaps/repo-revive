@@ -1,0 +1,28 @@
+{
+  "name": "repo-revive",
+  "version": "1.0.0",
+  "description": "Evidence-backed diagnosis, recovery planning, and conservative repair for troubled software repositories.",
+  "author": {
+    "name": "Cipher Technologies",
+    "email": "info@ciphertechnologies.co.zw",
+    "url": "https://ciphertechnologies.co.zw/plugins/repo-revive"
+  },
+  "homepage": "https://ciphertechnologies.co.zw/plugins/repo-revive",
+  "repository": "https://github.com/Lesleykaps/repo-revive.git",
+  "license": "MIT",
+  "keywords": ["repository", "diagnostics", "recovery", "repair"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Repo Revive",
+    "shortDescription": "Diagnose, plan, and safely recover software repositories.",
+    "longDescription": "Investigate broken or unfinished repositories, produce evidence-backed recovery plans, and make conservative verified repairs only when authorised.",
+    "developerName": "Cipher Technologies",
+    "category": "Productivity",
+    "websiteURL": "https://ciphertechnologies.co.zw/plugins/repo-revive",
+    "privacyPolicyURL": "https://ciphertechnologies.co.zw/plugins/repo-revive/privacy",
+    "termsOfServiceURL": "https://ciphertechnologies.co.zw/plugins/repo-revive/terms",
+    "capabilities": ["Repository inspection", "Recovery planning", "Conservative repair"],
+    "defaultPrompt": ["Diagnose this repository and create an evidence-backed rescue report."],
+    "brandColor": "#2563EB"
+  }
+}

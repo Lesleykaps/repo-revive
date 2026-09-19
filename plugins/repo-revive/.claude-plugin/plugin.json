@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "repo-revive",
+  "description": "Evidence-backed repository diagnosis, recovery planning, and conservative repair.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cipher Technologies",
+    "email": "info@ciphertechnologies.co.zw"
+  },
+  "homepage": "https://ciphertechnologies.co.zw/plugins/repo-revive",
+  "repository": "https://github.com/Lesleykaps/repo-revive.git",
+  "license": "MIT"
+}
