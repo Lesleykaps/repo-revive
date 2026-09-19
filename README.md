@@ -10,6 +10,15 @@ It supports three modes:
 
 ## Install with npm
 
+Install directly from GitHub now:
+
+```bash
+npm install -g github:Lesleykaps/repo-revive
+repo-revive codex
+```
+
+After the package is published to the npm registry, the shorter command will work:
+
 ```bash
 npx repo-revive codex
 ```
@@ -45,4 +54,3 @@ npm run pack:check
 ## Privacy and license
 
 Repo Revive is local-file-first and does not require an account or send repository content. See [PRIVACY.md](PRIVACY.md), [TERMS.md](TERMS.md), and [LICENSE](LICENSE).
-
