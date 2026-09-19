@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "repo-revive",
+  "version": "1.0.0",
+  "description": "Evidence-backed diagnosis, recovery planning, and conservative repair for troubled software repositories.",
+  "author": {
+    "name": "Lesley Kaps",
+    "url": "https://github.com/Lesleykaps"
+  },
+  "homepage": "https://github.com/Lesleykaps/repo-revive",
+  "repository": "https://github.com/Lesleykaps/repo-revive.git",
+  "license": "MIT",
+  "keywords": ["repository", "diagnostics", "repair", "codex-skill"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Repo Revive",
+        "shortDescription": "Diagnose, plan, and safely recover projects.",
+        "longDescription": "Investigate broken or unfinished repositories, create evidence-backed recovery plans, and make conservative verified repairs.",
+        "developerName": "Lesley Kaps",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/Lesleykaps/repo-revive",
+        "privacyPolicyURL": "https://github.com/Lesleykaps/repo-revive/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/Lesleykaps/repo-revive/blob/main/TERMS.md",
+        "capabilities": ["Repository inspection", "Recovery planning", "Conservative repair"],
+        "defaultPrompt": [
+          "Diagnose this repository and create an evidence-backed rescue report.",
+          "Plan recovery of this app without changing files.",
+          "Repair the verified broken imports only, then re-run relevant checks."
+        ],
+        "brandColor": "#2563EB"
+      }
+    }
+  }
+}

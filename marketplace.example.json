@@ -1,0 +1,20 @@
+{
+  "name": "repo-revive-marketplace",
+  "interface": {
+    "displayName": "Repo Revive Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "repo-revive",
+      "source": {
+        "source": "local",
+        "path": "./plugins/repo-revive"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

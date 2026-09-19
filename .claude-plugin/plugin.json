@@ -1,0 +1,11 @@
+{
+  "name": "repo-revive",
+  "version": "1.0.0",
+  "description": "Evidence-backed diagnosis, recovery planning, and conservative repair for troubled software repositories.",
+  "author": {
+    "name": "Lesley Kaps"
+  },
+  "license": "MIT",
+  "keywords": ["repository", "diagnostics", "repair"],
+  "skills": "./skills/"
+}

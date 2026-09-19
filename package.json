@@ -1,0 +1,30 @@
+{
+  "name": "repo-revive",
+  "version": "1.0.0",
+  "description": "Install the Repo Revive Codex skill from npm.",
+  "license": "MIT",
+  "author": "Lesley Kaps",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lesleykaps/repo-revive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lesleykaps/repo-revive/issues"
+  },
+  "homepage": "https://github.com/Lesleykaps/repo-revive#readme",
+  "keywords": ["codex", "skill", "repository", "diagnostics", "repair"],
+  "bin": {
+    "repo-revive": "bin/repo-revive.js"
+  },
+  "files": ["bin", "skills", ".codex-plugin", ".claude-plugin", "README.md", "LICENSE", "PRIVACY.md", "TERMS.md"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "pack:check": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
